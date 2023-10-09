@@ -2,7 +2,6 @@
 """module with function named wait_random"""
 
 
-import asyncio
 import random
 
 
