@@ -7,7 +7,7 @@ import asyncio
 
 wait = importlib.import_module('0-basic_async_syntax')
 
-async def wait_n(n: int, max_delay: int) -> list:
+async def wait_n(n: int, max_delay: int) -> list[float]:
     """Function that calls wait_random n times"""
 
     new_list = []
