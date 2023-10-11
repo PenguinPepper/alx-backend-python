@@ -8,8 +8,11 @@ from typing import List
 
 wait = importlib.import_module('0-basic_async_syntax')
 
+
 async def wait_n(n: int, max_delay: int) -> List[float]:
-    """Function that calls wait_random n times"""
+    """
+    Function that calls wait_random n times
+    """
 
     new_list = []
     for i in range(n):
