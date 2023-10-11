@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """module containing wait_n"""
 
-import importlib
 import asyncio
+import importlib
+from typing import List
 
 
 wait = importlib.import_module('0-basic_async_syntax')
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     """Function that calls wait_random n times"""
 
     new_list = []
