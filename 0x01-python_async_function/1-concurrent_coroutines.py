@@ -18,10 +18,4 @@ async def wait_n(n: int, min_delay: int) -> List[float]:
     for i in range(n):
         new_list.append(asyncio.create_task(wait.wait_random(min_delay)))
         completed, pending = await asyncio.wait(new_list)
-    sort = [task.result() for task in completed]
-    sorted_list = []
-    while sort:
-        min_value = min(sort)
-        sorted_list.append(min_value)
-        sort.remove(min_value)
-    return sorted_list
+    return [task.result() for task in completed]
