@@ -6,7 +6,7 @@ import random
 from typing import AsyncGenerator
 
 
-async def async_generator() -> AsyncGenerator[float]:
+async def async_generator() -> AsyncGenerator:
     """Function yeilds a andom number between 0 and 10"""
     for i in range(10):
         await asyncio.sleep(1)
