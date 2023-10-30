@@ -3,6 +3,7 @@
 
 from parameterized import parameterized
 import unittest
+from unittest.mock import Mock, patch
 import utils
 
 
@@ -28,5 +29,10 @@ class TestAccessNestedMap(unittest.TestCase):
 
 class TestGetJson(unittest.TestCase):
     """Class contains test cases for get_json method"""
-    def test_get_json(self):
+    @parameterized.expand([
+        ("http://example.com", {"payload": True}),
+        ("http://holberton.io", {"payload": False})
+        ])
+    @patch('utils.requests')
+    def test_get_json(self, test_url, test_payload):
         pass
