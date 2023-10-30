@@ -25,3 +25,8 @@ class TestAccessNestedMap(unittest.TestCase):
     def test_access_nested_map_exception(self, nested_map, path):
         with self.assertRaises(KeyError):
             utils.access_nested_map(nested_map, path)
+
+class TestGetJson(unittest.TestCase):
+    """Class contains test cases for get_json method"""
+    def test_get_json(self):
+        pass
